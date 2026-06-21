@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1c1c1e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Коды регионов РФ</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --bg-start: rgba(25, 35, 55, 0.95);
+            --bg-end: rgba(10, 12, 18, 1);
+            --glass-bg: rgba(30, 32, 44, 0.55);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: white;
+            --text-secondary: rgba(230, 235, 255, 0.7);
+            --card-bg: rgba(45, 48, 64, 0.5);
+            --badge-civil-bg: white;
+            --badge-civil-text: #1a1a2e;
+            --badge-military-bg: #1a1a1a;
+            --badge-military-text: #e0e0e0;
+            --info-bg: rgba(0,0,0,0.25);
+            --extra-border: rgba(255,255,255,0.2);
+            --title-color: white;
+            --modal-bg: rgba(20, 25, 45, 0.96);
+            --footer-color: rgba(200, 210, 240, 0.4);
+            --suggest-bg: rgba(30, 32, 44, 0.95);
+            --suggest-hover: rgba(0, 122, 255, 0.3);
+            
+            --input-bg: #1a1c2e;
+            --input-text: white;
+            --input-placeholder: rgba(255,255,255,0.45);
+            --input-shadow: inset 3px 3px 8px rgba(0,0,0,0.3), inset -3px -3px 8px rgba(255,255,255,0.05), 8px 8px 20px rgba(0,0,0,0.25);
+            --input-focus-shadow: inset 2px 2px 5px rgba(0,0,0,0.4), inset -2px -2px 5px rgba(255,255,255,0.03), 0 0 0 3px rgba(0,122,255,0.3);
+            --clear-btn-bg: #2a2c3e;
+            --clear-btn-color: #ff6b6b;
+            --clear-btn-shadow: 3px 3px 8px rgba(0,0,0,0.2), -2px -2px 5px rgba(255,255,255,0.05);
+            --clear-btn-active-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        body.light {
+            --bg-start: #e8edf5;
+            --bg-end: #d0d8e8;
+            --glass-bg: rgba(245, 248, 255, 0.75);
+            --glass-border: rgba(0, 0, 0, 0.12);
+            --text-primary: #1a1c2c;
+            --text-secondary: #2c3e66;
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --badge-civil-bg: #1a1c2c;
+            --badge-civil-text: white;
+            --badge-military-bg: #2c2c2e;
+            --badge-military-text: #f0f0f0;
+            --info-bg: rgba(0,0,0,0.06);
+            --extra-border: rgba(0, 0, 0, 0.15);
+            --title-color: #1a1c2c;
+            --modal-bg: rgba(245, 248, 255, 0.98);
+            --footer-color: rgba(60, 70, 100, 0.45);
+            --suggest-bg: rgba(245, 248, 255, 0.95);
+            --suggest-hover: rgba(0, 122, 255, 0.15);
+            
+            --input-bg: #e0e5ec;
+            --input-text: #1a1c2c;
+            --input-placeholder: rgba(60, 70, 100, 0.5);
+            --input-shadow: inset 3px 3px 8px rgba(163, 177, 198, 0.6), inset -3px -3px 8px rgba(255,255,255, 0.8), 8px 8px 20px rgba(163, 177, 198, 0.3);
+            --input-focus-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.7), inset -2px -2px 5px rgba(255,255,255, 0.9), 0 0 0 3px rgba(0,122,255,0.3);
+            --clear-btn-bg: #d0d5df;
+            --clear-btn-color: #e06c6c;
+            --clear-btn-shadow: 3px 3px 8px rgba(163, 177, 198, 0.4), -2px -2px 5px rgba(255,255,255, 0.7);
+            --clear-btn-active-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.5);
+        }
+        
+        body.dark {
+            --bg-start: rgba(25, 35, 55, 0.95);
+            --bg-end: rgba(10, 12, 18, 1);
+            --glass-bg: rgba(30, 32, 44, 0.55);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: white;
+            --text-secondary: rgba(230, 235, 255, 0.7);
+            --card-bg: rgba(45, 48, 64, 0.5);
+            --badge-civil-bg: white;
+            --badge-civil-text: #1a1a2e;
+            --badge-military-bg: #1a1a1a;
+            --badge-military-text: #e0e0e0;
+            --info-bg: rgba(0,0,0,0.25);
+            --extra-border: rgba(255,255,255,0.2);
+            --title-color: white;
+            --modal-bg: rgba(20, 25, 45, 0.96);
+            --footer-color: rgba(200, 210, 240, 0.4);
+            --suggest-bg: rgba(30, 32, 44, 0.95);
+            --suggest-hover: rgba(0, 122, 255, 0.3);
+            
+            --input-bg: #1a1c2e;
+            --input-text: white;
+            --input-placeholder: rgba(255,255,255,0.45);
+            --input-shadow: inset 3px 3px 8px rgba(0,0,0,0.3), inset -3px -3px 8px rgba(255,255,255,0.05), 8px 8px 20px rgba(0,0,0,0.25);
+            --input-focus-shadow: inset 2px 2px 5px rgba(0,0,0,0.4), inset -2px -2px 5px rgba(255,255,255,0.03), 0 0 0 3px rgba(0,122,255,0.3);
+            --clear-btn-bg: #2a2c3e;
+            --clear-btn-color: #ff6b6b;
+            --clear-btn-shadow: 3px 3px 8px rgba(0,0,0,0.2), -2px -2px 5px rgba(255,255,255,0.05);
+            --clear-btn-active-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at 20% 30%, var(--bg-start), var(--bg-end));
+            font-family: system-ui, -apple-system, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .glass-app {
+            max-width: 760px;
+            width: 100%;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-radius: 56px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+            padding: 1.8rem 1.5rem 1.2rem;
+            transition: background 0.2s;
+            position: relative;
+        }
+
+        /* ===== ШАПКА ===== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 1.2rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: var(--title-color);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mode-toggle-header {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 30px;
+            padding: 3px 4px;
+            border: 1px solid rgba(255,255,255,0.08);
+            height: 36px;
+            cursor: pointer;
+            transition: background 0.2s;
+            user-select: none;
+        }
+        .mode-toggle-header:hover {
+            background: rgba(255,255,255,0.10);
+        }
+        .mode-toggle-header:active {
+            transform: scale(0.97);
+        }
+
+        .mode-toggle-header .icon-btn {
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 30px;
+            background: transparent;
+            color: rgba(255,255,255,0.3);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+        .mode-toggle-header .icon-btn.active {
+            background: #007aff;
+            color: white;
+            box-shadow: 0 2px 10px rgba(0,122,255,0.3);
+        }
+
+        .theme-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.06);
+            color: var(--text-primary);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .theme-btn:active {
+            transform: scale(0.92);
+        }
+        .theme-btn:hover {
+            background: rgba(255,255,255,0.12);
+        }
+
+        /* ===== ПОЛЕ ВВОДА ===== */
+        .search-container {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin: 0.5rem 0 0.5rem;
+        }
+        .search-container.compact {
+            margin: 0 0 0.3rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .region-input {
+            width: 100%;
+            background: var(--input-bg);
+            border: none;
+            border-radius: 60px;
+            padding: 1.2rem 3.8rem 1.2rem 1.8rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--input-text);
+            font-family: monospace, system-ui;
+            letter-spacing: 3px;
+            outline: none;
+            transition: all 0.2s;
+            text-align: center;
+            box-shadow: var(--input-shadow);
+            height: 64px;
+        }
+        .region-input:focus {
+            box-shadow: var(--input-focus-shadow);
+        }
+        .region-input::placeholder {
+            color: var(--input-placeholder);
+            font-size: 1.1rem;
+            font-weight: 500;
+            font-family: system-ui;
+            text-align: center;
+            letter-spacing: normal;
+        }
+        .region-input.text-mode {
+            font-family: system-ui;
+            letter-spacing: normal;
+            font-weight: 500;
+        }
+
+        .clear-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--clear-btn-bg);
+            border: none;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--clear-btn-color);
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.1s;
+            box-shadow: var(--clear-btn-shadow);
+            z-index: 2;
+        }
+        .clear-btn.visible {
+            display: flex;
+        }
+        .clear-btn:active {
+            transform: translateY(-50%) scale(0.9);
+            box-shadow: var(--clear-btn-active-shadow);
+        }
+
+        /* ===== ОВАЛЬНАЯ КНОПКА ГОЛОСОВОГО ВВОДА (160×80px) ===== */
+        .voice-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            margin-bottom: 0.5rem;
+            transition: opacity 0.3s, transform 0.3s, margin 0.3s;
+        }
+        .voice-container.hidden {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            height: 0;
+            overflow: visible;
+        }
+
+        .voice-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 160px;
+            height: 80px;
+            border-radius: 60px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: rgba(255,255,255,0.6);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+            animation: pulse-glass 3s ease-in-out infinite;
+            padding: 0 20px;
+        }
+
+        .voice-btn:hover {
+            background: rgba(255,255,255,0.12);
+            transform: scale(1.02);
+            box-shadow: 0 8px 40px rgba(0,122,255,0.15);
+        }
+
+        .voice-btn:active {
+            transform: scale(0.95);
+        }
+
+        .voice-btn svg {
+            width: 32px;
+            height: 32px;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .voice-btn .btn-label {
+            display: none;
+        }
+
+        .voice-btn.listening {
+            color: #ff3b30;
+            border-color: rgba(255,59,48,0.3);
+            animation: pulse-active 1.5s ease-in-out infinite;
+            box-shadow: 0 8px 40px rgba(255,59,48,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+        .voice-btn.listening svg {
+            stroke: #ff3b30;
+        }
+
+        @keyframes pulse-glass {
+            0%, 100% {
+                box-shadow: 0 8px 32px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1), 0 0 20px rgba(0,122,255,0.03);
+            }
+            50% {
+                box-shadow: 0 8px 40px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.15), 0 0 40px rgba(0,122,255,0.08);
+            }
+        }
+
+        @keyframes pulse-active {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 8px 32px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 48px rgba(255,59,48,0.2), inset 0 1px 0 rgba(255,255,255,0.15);
+            }
+        }
+
+        /* ===== АВТОДОПОЛНЕНИЕ ===== */
+        .suggestions {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            right: 0;
+            background: var(--suggest-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            max-height: 260px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+        }
+        .suggestions.active {
+            display: block;
+        }
+        .suggestions .suggest-item {
+            padding: 12px 18px;
+            cursor: pointer;
+            transition: 0.1s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+        }
+        .suggestions .suggest-item:last-child {
+            border-bottom: none;
+        }
+        .suggestions .suggest-item:hover,
+        .suggestions .suggest-item.active {
+            background: var(--suggest-hover);
+        }
+        .suggestions .suggest-item .code {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+        .suggestions .suggest-item .name {
+            font-size: 0.9rem;
+        }
+        .suggestions .suggest-item .badge-suggest {
+            font-size: 0.6rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            background: rgba(0,122,255,0.2);
+            color: #007aff;
+        }
+
+        .suggestions::-webkit-scrollbar {
+            width: 4px;
+        }
+        .suggestions::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .suggestions::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+        }
+
+        /* ===== РЕЗУЛЬТАТЫ ===== */
+        .results-container {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 0;
+            margin-top: 0.3rem;
+        }
+        .result-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 48px;
+            padding: 1.2rem 1.5rem;
+            margin-top: 12px;
+            border: 1px solid var(--glass-border);
+            transition: 0.15s;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 0.3s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .result-card.civil-card {
+            cursor: pointer;
+        }
+        .result-card.civil-card:active {
+            transform: scale(0.99);
+        }
+        .result-card.military-card {
+            cursor: default;
+        }
+        .result-header {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        .region-type {
+            background: var(--badge-civil-bg);
+            color: var(--badge-civil-text);
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .region-type.military {
+            background: var(--badge-military-bg);
+            color: var(--badge-military-text);
+            border: 1px solid #555;
+        }
+        .region-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0.3rem 0 0.1rem;
+            color: var(--text-primary);
+        }
+        .region-desc {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        .error-message {
+            color: #FFA69E;
+            background: rgba(100, 30, 25, 0.5);
+            border-radius: 32px;
+            padding: 12px 20px;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+            margin-top: 12px;
+            animation: fadeInUp 0.3s forwards;
+        }
+
+        /* ===== ФУТЕР ===== */
+        .footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.7rem;
+            color: var(--footer-color);
+            border-top: 1px solid var(--extra-border);
+            padding-top: 14px;
+            cursor: pointer;
+            transition: 0.15s;
+            user-select: none;
+        }
+        .footer:hover {
+            color: rgba(255,255,255,0.6);
+        }
+        .footer:active {
+            transform: scale(0.98);
+        }
+
+        /* ===== МОДАЛЬНЫЕ ОКНА ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-glass {
+            background: var(--modal-bg);
+            backdrop-filter: blur(32px);
+            border-radius: 48px;
+            max-width: 400px;
+            width: 85%;
+            padding: 1.6rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .modal-overlay.active .modal-glass {
+            transform: scale(1);
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--extra-border);
+        }
+        .modal-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .modal-close {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.1s;
+        }
+        .modal-close:active {
+            transform: scale(0.95);
+        }
+        .modal-content {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        .modal-content p {
+            margin: 0.7rem 0;
+        }
+        .modal-content strong {
+            color: var(--text-primary);
+        }
+        .modal-badge {
+            display: inline-block;
+            background: var(--badge-civil-bg);
+            color: var(--badge-civil-text);
+            padding: 3px 10px;
+            border-radius: 30px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        .modal-content .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .modal-content .info-row:last-child {
+            border-bottom: none;
+        }
+        .modal-content .info-label {
+            color: rgba(255,255,255,0.5);
+        }
+        .modal-content .info-value {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        @media (max-width: 550px) {
+            body { padding: 1rem; }
+            .glass-app { padding: 1.2rem; }
+            .title { font-size: 1.1rem; }
+            .region-input { 
+                font-size: 1.6rem; 
+                padding: 1rem 3.2rem 1rem 1.2rem; 
+                height: 54px;
+            }
+            .voice-btn {
+                width: 130px;
+                height: 64px;
+                border-radius: 48px;
+                padding: 0 16px;
+            }
+            .voice-btn svg {
+                width: 26px;
+                height: 26px;
+            }
+            .clear-btn { width: 30px; height: 30px; font-size: 15px; right: 10px; }
+            .mode-toggle-header { height: 32px; padding: 2px 3px; }
+            .mode-toggle-header .icon-btn { width: 26px; height: 26px; font-size: 0.8rem; }
+            .theme-btn { width: 32px; height: 32px; font-size: 0.85rem; }
+            .suggestions .suggest-item { padding: 10px 14px; font-size: 0.85rem; }
+            .region-input::placeholder { font-size: 0.9rem; }
+            .results-container { margin-top: 0.2rem; }
+            .result-card { margin-top: 10px; padding: 1rem 1.2rem; }
+            .voice-container { margin-top: 2rem; }
+        }
+
+        @media (max-width: 400px) {
+            .voice-btn {
+                width: 110px;
+                height: 56px;
+                border-radius: 40px;
+                padding: 0 12px;
+            }
+            .voice-btn svg {
+                width: 22px;
+                height: 22px;
+            }
+            .region-input {
+                font-size: 1.2rem;
+                padding: 0.8rem 3rem 0.8rem 1rem;
+                height: 48px;
+            }
+            .clear-btn {
+                width: 26px;
+                height: 26px;
+                font-size: 13px;
+                right: 8px;
+            }
+            .voice-container { margin-top: 1.5rem; }
+        }
+    </style>
+</head>
+<body class="dark">
+<div class="glass-app" id="appContainer">
+    <!-- ===== ШАПКА ===== -->
+    <div class="header">
+        <div class="title">🚗 Коды регионов</div>
+        <div class="header-right">
+            <div class="mode-toggle-header" id="modeToggleHeader" role="button" tabindex="0" aria-label="Переключить режим поиска">
+                <span class="icon-btn active" id="modeCodeIcon">🔢</span>
+                <span class="icon-btn" id="modeNameIcon">🔤</span>
+            </div>
+            <button class="theme-btn" id="themeToggleBtn" aria-label="Переключить тему">🌙</button>
+        </div>
+    </div>
+
+    <!-- ===== ПОИСК ===== -->
+    <div class="search-container" id="searchContainer">
+        <div class="input-wrapper">
+            <input type="text" id="regionCodeInput" class="region-input" placeholder="Введите код" inputmode="numeric" autocomplete="off" disabled>
+            <button id="clearInputBtn" class="clear-btn" aria-label="Очистить">✕</button>
+        </div>
+        <div class="suggestions" id="suggestions"></div>
+    </div>
+
+    <!-- ===== ОВАЛЬНАЯ КНОПКА ГОЛОСОВОГО ВВОДА (160×80px, стекло, текст скрыт, отступ 3rem) ===== -->
+    <div class="voice-container" id="voiceContainer">
+        <button id="voiceBtn" class="voice-btn" aria-label="Голосовой ввод">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="22"/>
+            </svg>
+            <span class="btn-label">Голос</span>
+        </button>
+    </div>
+
+    <div id="resultsContainer" class="results-container"></div>
+    
+    <!-- ===== ФУТЕР ===== -->
+    <div class="footer" id="footer">
+        версия 3.9.7 · загрузка...
+    </div>
+</div>
+
+<!-- ===== МОДАЛКА ИНФО О ПРИЛОЖЕНИИ ===== -->
+<div id="infoModalApp" class="modal-overlay">
+    <div class="modal-glass">
+        <div class="modal-header">
+            <h3>📋 О приложении</h3>
+            <button class="modal-close" id="modalAppCloseBtn">✕</button>
+        </div>
+        <div class="modal-content" id="modalAppContent">
+            <div class="info-row">
+                <span class="info-label">📱 Приложение</span>
+                <span class="info-value">Коды регионов РФ</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">🏷️ Версия приложения</span>
+                <span class="info-value" id="appVersion">3.9.7</span>
+            </div>
+            <div class="info-row" id="buildDateRow">
+                <span class="info-label">📅 Сборка</span>
+                <span class="info-value" id="buildDate">2026-06-21</span>
+            </div>
+            <div class="info-row" id="dbVersionRow">
+                <span class="info-label">🗄️ Версия базы данных</span>
+                <span class="info-value" id="dbVersionInfo">--</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">📧 Контакт</span>
+                <span class="info-value">drts@bk.ru</span>
+            </div>
+            <div style="margin-top: 1rem; text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.3);">
+                © 2026 drts · Все права защищены
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== МОДАЛКА РЕГИОНА ===== -->
+<div id="infoModalRegion" class="modal-overlay">
+    <div class="modal-glass">
+        <div class="modal-header">
+            <h3 id="modalTitle">Дополнительная информация</h3>
+            <button class="modal-close" id="modalCloseBtn">✕</button>
+        </div>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+</div>
+
+<script>
+    // ============================================================
+    // КОНСТАНТЫ
+    // ============================================================
+    const APP_VERSION = '3.9.7';
+    
+    // ============================================================
+    // ОСНОВНАЯ ЛОГИКА
+    // ============================================================
+    
+    let regionsData = [];
+    let codeIndex = {};
+    let militaryData = {};
+    let dbVersion = "";
+    let dbDate = "";
+    let currentMode = 'code';
+    let currentTheme = 'dark';
+    let recognition = null;
+    
+    const appContainer = document.getElementById('appContainer');
+    const inputEl = document.getElementById('regionCodeInput');
+    const clearBtn = document.getElementById('clearInputBtn');
+    const voiceBtn = document.getElementById('voiceBtn');
+    const voiceContainer = document.getElementById('voiceContainer');
+    const resultsContainer = document.getElementById('resultsContainer');
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const searchContainer = document.getElementById('searchContainer');
+    const footerEl = document.getElementById('footer');
+    const suggestionsEl = document.getElementById('suggestions');
+
+    const modeToggleHeader = document.getElementById('modeToggleHeader');
+    const modeCodeIcon = document.getElementById('modeCodeIcon');
+    const modeNameIcon = document.getElementById('modeNameIcon');
+
+    const modalRegion = document.getElementById('infoModalRegion');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.getElementById('modalContent');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+    const modalApp = document.getElementById('infoModalApp');
+    const modalAppCloseBtn = document.getElementById('modalAppCloseBtn');
+    const dbVersionInfo = document.getElementById('dbVersionInfo');
+    const dbVersionRow = document.getElementById('dbVersionRow');
+    const buildDateRow = document.getElementById('buildDateRow');
+    const buildDateEl = document.getElementById('buildDate');
+
+    // ===== КЛИК ПО ФУТЕРУ =====
+    footerEl.addEventListener('click', function() {
+        document.getElementById('appVersion').textContent = APP_VERSION;
+        buildDateEl.textContent = dbDate || '2026-06-21';
+        dbVersionInfo.textContent = dbVersion || '--';
+        
+        // Скрываем строки, если данные отсутствуют
+        if (!dbDate) {
+            buildDateRow.style.display = 'none';
+        } else {
+            buildDateRow.style.display = 'flex';
+        }
+        if (!dbVersion || dbVersion === '--') {
+            dbVersionRow.style.display = 'none';
+        } else {
+            dbVersionRow.style.display = 'flex';
+        }
+        
+        modalApp.classList.add('active');
+    });
+
+    modalAppCloseBtn.addEventListener('click', function() {
+        modalApp.classList.remove('active');
+    });
+
+    modalApp.addEventListener('click', function(e) {
+        if (e.target === modalApp) {
+            modalApp.classList.remove('active');
+        }
+    });
+
+    // ===== ПЕРЕКЛЮЧЕНИЕ РЕЖИМА =====
+    function toggleMode() {
+        currentMode = currentMode === 'code' ? 'name' : 'code';
+        updateModeUI();
+        inputEl.focus();
+        inputEl.value = '';
+        inputEl.placeholder = currentMode === 'code' ? 'Введите код' : 'Введите название';
+        inputEl.inputMode = currentMode === 'code' ? 'numeric' : 'text';
+        inputEl.classList.toggle('text-mode', currentMode === 'name');
+        clearBtn.classList.remove('visible');
+        clearResults();
+        closeSuggestions();
+        toggleVoiceButton(true);
+    }
+
+    function updateModeUI() {
+        const isCode = currentMode === 'code';
+        modeCodeIcon.className = 'icon-btn' + (isCode ? ' active' : '');
+        modeNameIcon.className = 'icon-btn' + (isCode ? '' : ' active');
+    }
+
+    modeToggleHeader.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleMode();
+    });
+
+    inputEl.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab' && !e.shiftKey) {
+            e.preventDefault();
+            toggleMode();
+        }
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    // ===== КЛИК ПО СВОБОДНОЙ ОБЛАСТИ =====
+    appContainer.addEventListener('click', (e) => {
+        const target = e.target;
+        const isInput = target === inputEl || inputEl.contains(target);
+        const isClearBtn = target === clearBtn || clearBtn.contains(target);
+        const isVoiceBtn = target === voiceBtn || voiceBtn.contains(target);
+        const isResultCard = target.closest('.result-card');
+        const isSuggestion = target.closest('.suggest-item');
+        const isModeBtn = target.closest('.mode-toggle-header');
+        const isFooter = target.closest('.footer');
+        const isThemeBtn = target.closest('.theme-btn');
+        
+        if (!isInput && !isClearBtn && !isVoiceBtn && !isResultCard && !isSuggestion && !isModeBtn && !isFooter && !isThemeBtn) {
+            closeSuggestions();
+            if (inputEl.value.trim() !== '') {
+                inputEl.value = '';
+                clearBtn.classList.remove('visible');
+                clearResults();
+                inputEl.focus();
+                toggleVoiceButton(true);
+            }
+        }
+    });
+
+    // ===== ЗАГРУЗКА ДАННЫХ =====
+    async function loadData() {
+        try {
+            const cached = localStorage.getItem('regionsDB');
+            if (cached) {
+                const db = JSON.parse(cached);
+                regionsData = db.regions;
+                codeIndex = db.codeIndex;
+                militaryData = db.military || {};
+                dbVersion = db.version || "";
+                dbDate = db.updated || "";
+                footerEl.innerHTML = `версия ${APP_VERSION} · дата сборки ${dbDate.replace(/-/g, '') || '--'} · © drts`;
+                enableApp();
+                return;
+            }
+            
+            const response = await fetch('regions.json');
+            if (!response.ok) throw new Error('Не удалось загрузить regions.json');
+            const db = await response.json();
+            
+            regionsData = db.regions;
+            codeIndex = db.codeIndex;
+            militaryData = db.military || {};
+            dbVersion = db.version || "";
+            dbDate = db.updated || "";
+            
+            localStorage.setItem('regionsDB', JSON.stringify({ 
+                regions: regionsData, 
+                codeIndex, 
+                military: militaryData, 
+                version: dbVersion, 
+                updated: dbDate 
+            }));
+            footerEl.innerHTML = `версия ${APP_VERSION} · дата сборки ${dbDate.replace(/-/g, '') || '--'} · © drts`;
+            enableApp();
+        } catch (err) {
+            console.error('Ошибка загрузки данных:', err);
+            resultsContainer.innerHTML = '<div class="error-message">⚠️ Не удалось загрузить справочник регионов. Проверьте соединение или перезагрузите приложение.</div>';
+            footerEl.innerHTML = `версия ${APP_VERSION} · дата сборки -- · © drts`;
+            inputEl.disabled = true;
+        }
+    }
+    
+    function enableApp() {
+        inputEl.disabled = false;
+        inputEl.placeholder = "Введите код";
+        updateModeUI();
+        initVoiceInput();
+        performSearch();
+        toggleVoiceButton(true);
+    }
+
+    // ===== ГОЛОСОВОЙ ВВОД =====
+    function initVoiceInput() {
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRecognition) {
+            voiceContainer.classList.add('hidden');
+            console.log('Голосовой ввод не поддерживается в этом браузере');
+            return;
+        }
+
+        recognition = new SpeechRecognition();
+        recognition.lang = 'ru-RU';
+        recognition.continuous = false;
+        recognition.interimResults = true;
+        recognition.maxAlternatives = 1;
+
+        recognition.onstart = function() {
+            voiceBtn.classList.add('listening');
+        };
+
+        recognition.onend = function() {
+            voiceBtn.classList.remove('listening');
+        };
+
+        recognition.onerror = function(event) {
+            console.warn('Ошибка распознавания:', event.error);
+            voiceBtn.classList.remove('listening');
+            if (event.error === 'not-allowed') {
+                voiceContainer.classList.add('hidden');
+            }
+        };
+
+        recognition.onresult = function(event) {
+            let finalText = '';
+            let interimText = '';
+            
+            for (let i = event.resultIndex; i < event.results.length; i++) {
+                const transcript = event.results[i][0].transcript;
+                if (event.results[i].isFinal) {
+                    finalText += transcript;
+                } else {
+                    interimText += transcript;
+                }
+            }
+            
+            const text = finalText || interimText;
+            if (text) {
+                inputEl.value = text.trim();
+                clearBtn.classList.add('visible');
+                toggleVoiceButton(false);
+                if (/^\d+$/.test(text.trim())) {
+                    currentMode = 'code';
+                    updateModeUI();
+                    inputEl.placeholder = 'Введите код';
+                    inputEl.inputMode = 'numeric';
+                    inputEl.classList.remove('text-mode');
+                } else {
+                    if (currentMode === 'code' && /[а-яёa-z]/i.test(text)) {
+                        currentMode = 'name';
+                        updateModeUI();
+                        inputEl.placeholder = 'Введите название';
+                        inputEl.inputMode = 'text';
+                        inputEl.classList.add('text-mode');
+                    }
+                }
+                performSearch();
+            }
+        };
+
+        voiceBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (recognition) {
+                try {
+                    if (voiceBtn.classList.contains('listening')) {
+                        recognition.stop();
+                    } else {
+                        recognition.start();
+                    }
+                } catch (err) {
+                    console.warn('Ошибка запуска распознавания:', err);
+                }
+            }
+        });
+    }
+
+    // ===== УПРАВЛЕНИЕ ВИДИМОСТЬЮ КНОПКИ =====
+    function toggleVoiceButton(show) {
+        const isEmpty = inputEl.value.trim() === '';
+        if (show && isEmpty) {
+            voiceContainer.classList.remove('hidden');
+        } else {
+            voiceContainer.classList.add('hidden');
+        }
+    }
+
+    // ===== ПЕРЕСЧЁТ ЧАСОВОГО ПОЯСА =====
+    function formatTimeZone(utcOffset) {
+        if (!utcOffset) return '—';
+        const match = utcOffset.match(/([+-])(\d{2}):(\d{2})/);
+        if (!match) return utcOffset;
+        const sign = match[1];
+        const hours = parseInt(match[2], 10);
+        const minutes = parseInt(match[3], 10);
+        let totalMinutes = (hours * 60) + minutes;
+        if (sign === '-') totalMinutes = -totalMinutes;
+        const MSK_OFFSET = 180;
+        let diffMinutes = totalMinutes - MSK_OFFSET;
+        if (diffMinutes === 0) return 'МСК';
+        const diffHours = Math.abs(diffMinutes) / 60;
+        const signDisplay = diffMinutes > 0 ? '+' : '-';
+        return `МСК${signDisplay}${diffHours}`;
+    }
+
+    // ===== АВТОДОПОЛНЕНИЕ =====
+    function getSuggestions(query) {
+        if (!query || query.length < 1 || !regionsData.length) return [];
+        const q = query.toLowerCase().trim();
+        const results = [];
+        const seen = new Set();
+        if (currentMode === 'code') {
+            if (/^\d+$/.test(q)) {
+                for (const [code, ids] of Object.entries(codeIndex)) {
+                    if (code.startsWith(q)) {
+                        for (const id of ids) {
+                            const region = regionsData[id];
+                            if (region && !seen.has(region.title)) {
+                                seen.add(region.title);
+                                results.push({
+                                    code: code,
+                                    title: region.title,
+                                    type: 'code',
+                                    id: id
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            if (q.length >= 2 && /[а-яёa-z]/.test(q)) {
+                for (const region of regionsData) {
+                    if (seen.has(region.title)) continue;
+                    const title = region.title.toLowerCase();
+                    if (title.includes(q)) {
+                        const mainCode = region.gibdd && region.gibdd.length > 0 ? region.gibdd[0] : '?';
+                        seen.add(region.title);
+                        results.push({
+                            code: mainCode,
+                            title: region.title,
+                            type: 'name',
+                            id: region.id
+                        });
+                    }
+                }
+            }
+        }
+        return results.slice(0, 10);
+    }
+
+    function showSuggestions(query) {
+        const items = getSuggestions(query);
+        suggestionsEl.innerHTML = '';
+        if (items.length === 0) {
+            suggestionsEl.classList.remove('active');
+            return;
+        }
+        items.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'suggest-item';
+            div.setAttribute('data-index', index);
+            div.innerHTML = `
+                <span class="code">${item.code}</span>
+                <span class="name">${escapeHtml(item.title)}</span>
+                <span class="badge-suggest">${item.type === 'code' ? 'код' : 'название'}</span>
+            `;
+            div.addEventListener('click', () => {
+                inputEl.value = item.code;
+                closeSuggestions();
+                clearBtn.classList.add('visible');
+                toggleVoiceButton(false);
+                performSearch();
+                inputEl.focus();
+            });
+            suggestionsEl.appendChild(div);
+        });
+        suggestionsEl.classList.add('active');
+    }
+
+    function closeSuggestions() {
+        suggestionsEl.classList.remove('active');
+        activeIndex = -1;
+    }
+
+    let activeIndex = -1;
+    inputEl.addEventListener('keydown', (e) => {
+        const items = suggestionsEl.querySelectorAll('.suggest-item');
+        if (items.length === 0) return;
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            activeIndex = Math.min(activeIndex + 1, items.length - 1);
+            updateActiveItem(items);
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            activeIndex = Math.max(activeIndex - 1, 0);
+            updateActiveItem(items);
+        } else if (e.key === 'Enter') {
+            if (activeIndex >= 0 && items[activeIndex]) {
+                items[activeIndex].click();
+            } else if (items[0]) {
+                items[0].click();
+            }
+        } else if (e.key === 'Escape') {
+            closeSuggestions();
+        }
+    });
+
+    function updateActiveItem(items) {
+        items.forEach((el, i) => {
+            el.classList.toggle('active', i === activeIndex);
+        });
+        if (activeIndex >= 0 && items[activeIndex]) {
+            items[activeIndex].scrollIntoView({ block: 'nearest' });
+        }
+    }
+
+    // ===== МОДАЛЬНОЕ ОКНО РЕГИОНА =====
+    function showModal(region, codeDisplay) {
+        const ex = region;
+        const allCodes = ex.gibdd && ex.gibdd.length > 0 ? ex.gibdd : ['?'];
+        const formattedCodes = allCodes.map(c => typeof c === 'number' ? (c < 10 ? `0${c}` : `${c}`) : c).join(', ');
+        const timeZoneDisplay = formatTimeZone(ex.utc_offset);
+        let html = `<div class="modal-badge">РЕГИОН</div>`;
+        if (ex.title) html += `<p><strong>📍 Название:</strong> ${escapeHtml(ex.title)}</p>`;
+        if (ex.capital && ex.capital !== '—') html += `<p><strong>🏛 Столица / центр:</strong> ${escapeHtml(ex.capital)}</p>`;
+        if (ex.phones && ex.phones !== '—' && ex.phones !== '') html += `<p><strong>📞 Телефонный код:</strong> ${escapeHtml(ex.phones)}</p>`;
+        html += `<p><strong>🚗 Автомобильные коды региона:</strong> ${escapeHtml(formattedCodes)}</p>`;
+        if (ex.type && ex.type !== '—') html += `<p><strong>🏛 Тип региона:</strong> ${escapeHtml(ex.type)}</p>`;
+        if (ex.okato && ex.okato !== '—' && ex.okato !== null) html += `<p><strong>📊 ОКАТО:</strong> ${escapeHtml(ex.okato)}</p>`;
+        if (ex.code_iso_31662 && ex.code_iso_31662 !== '—' && ex.code_iso_31662 !== null) html += `<p><strong>🌐 ISO 3166-2:</strong> ${escapeHtml(ex.code_iso_31662)}</p>`;
+        html += `<p><strong>⏱ Часовой пояс:</strong> ${escapeHtml(timeZoneDisplay)}</p>`;
+        if (html === `<div class="modal-badge">РЕГИОН</div>`) {
+            html += `<p>Дополнительная информация отсутствует</p>`;
+        }
+        modalTitle.textContent = `📋 ${ex.title}`;
+        modalContent.innerHTML = html;
+        modalRegion.classList.add('active');
+        window.history.pushState({ modal: true }, '');
+    }
+
+    function closeModalRegion() { 
+        modalRegion.classList.remove('active');
+        if (window.history.state && window.history.state.modal) {
+            window.history.back();
+        }
+    }
+    modalRegion.addEventListener('click', (e) => { if (e.target === modalRegion) closeModalRegion(); });
+    modalCloseBtn.addEventListener('click', closeModalRegion);
+
+    // ===== КНОПКА "НАЗАД" =====
+    window.addEventListener('popstate', function(e) {
+        if (modalRegion.classList.contains('active')) {
+            closeModalRegion();
+            return;
+        }
+        if (modalApp.classList.contains('active')) {
+            modalApp.classList.remove('active');
+            return;
+        }
+        if (inputEl.value.trim() !== '') {
+            inputEl.value = '';
+            closeSuggestions();
+            clearBtn.classList.remove('visible');
+            clearResults();
+            inputEl.blur();
+            toggleVoiceButton(true);
+            return;
+        }
+        try {
+            window.location.href = 'intent://#Intent;action=android.intent.action.MAIN;category=android.intent.category.HOME;end';
+        } catch(err) {
+            window.close();
+        }
+    }, true);
+    if (!window.history.state) {
+        window.history.pushState({ page: 'main' }, '');
+    }
+
+    // ===== UI-ФУНКЦИИ =====
+    function clearResults() {
+        resultsContainer.innerHTML = '';
+        searchContainer.classList.remove('compact');
+        closeSuggestions();
+        toggleVoiceButton(true);
+    }
+
+    function showError(msg) {
+        clearResults();
+        const errDiv = document.createElement('div');
+        errDiv.className = 'error-message';
+        errDiv.innerText = msg;
+        resultsContainer.appendChild(errDiv);
+        toggleVoiceButton(false);
+    }
+
+    function createCivilCard(region, codeDisplay) {
+        const card = document.createElement('div');
+        card.className = 'result-card civil-card';
+        card.innerHTML = `
+            <div class="result-header">
+                <span class="region-type">РЕГИОН</span>
+            </div>
+            <div class="region-name">${escapeHtml(region.title)}</div>
+            <div class="region-desc">${escapeHtml(region.type || 'субъект РФ')}</div>
+        `;
+        card.addEventListener('click', function(e) {
+            e.stopPropagation();
+            showModal(region, codeDisplay);
+        });
+        return card;
+    }
+
+    function createMilitaryCard(code, name, desc) {
+        const card = document.createElement('div');
+        card.className = 'result-card military-card';
+        card.innerHTML = `
+            <div class="result-header">
+                <span class="region-type military">ВОЕННЫЙ</span>
+            </div>
+            <div class="region-name">${escapeHtml(name)}</div>
+            <div class="region-desc">${escapeHtml(desc)}</div>
+        `;
+        return card;
+    }
+
+    function escapeHtml(str) { 
+        if (!str) return '';
+        return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;'); 
+    }
+
+    function performSearch() {
+        if (!regionsData.length) return;
+        closeSuggestions();
+        let raw = inputEl.value.trim();
+        if (raw === '') { 
+            clearResults(); 
+            return; 
+        }
+        if (currentMode === 'code') {
+            let numStr = raw.replace(/\D/g, '');
+            if (numStr === '') { showError('Введите цифры кода'); return; }
+            let codeVal = parseInt(numStr, 10);
+            if (isNaN(codeVal) || codeVal < 0 || codeVal > 999) { showError('Код от 1 до 199'); return; }
+            const codeStr = codeVal.toString();
+            const regionIds = codeIndex[codeStr] || [];
+            const civilEntries = regionIds.map(id => regionsData[id]).filter(r => r);
+            const militaryEntry = militaryData[codeStr];
+            if (civilEntries.length === 0 && !militaryEntry) {
+                showError(`Нет данных для кода ${codeStr}`);
+                return;
+            }
+            searchContainer.classList.add('compact');
+            resultsContainer.innerHTML = '';
+            const displayCode = codeVal < 10 ? `0${codeVal}` : `${codeVal}`;
+            for (const region of civilEntries) {
+                resultsContainer.appendChild(createCivilCard(region, displayCode));
+            }
+            if (militaryEntry) {
+                const [milName, milDesc] = militaryEntry;
+                resultsContainer.appendChild(createMilitaryCard(codeStr, milName, milDesc));
+            }
+        } else {
+            const q = raw.toLowerCase();
+            const found = [];
+            const seen = new Set();
+            for (const region of regionsData) {
+                if (seen.has(region.title)) continue;
+                const title = region.title.toLowerCase();
+                if (title.includes(q)) {
+                    seen.add(region.title);
+                    found.push(region);
+                }
+            }
+            if (found.length === 0) {
+                showError(`Не найдено регионов по запросу "${raw}"`);
+                return;
+            }
+            searchContainer.classList.add('compact');
+            resultsContainer.innerHTML = '';
+            for (const region of found) {
+                const mainCode = region.gibdd && region.gibdd.length > 0 ? region.gibdd[0] : '?';
+                const displayCode = typeof mainCode === 'number' ? (mainCode < 10 ? `0${mainCode}` : `${mainCode}`) : mainCode;
+                resultsContainer.appendChild(createCivilCard(region, displayCode));
+            }
+        }
+    }
+
+    // ===== ОБРАБОТЧИК ВВОДА =====
+    inputEl.addEventListener('input', () => { 
+        const val = inputEl.value.trim();
+        if (val === '') {
+            toggleVoiceButton(true);
+        } else {
+            toggleVoiceButton(false);
+        }
+        if (currentMode === 'name' && /^\d+$/.test(val) && val.length >= 1) {
+            currentMode = 'code';
+            updateModeUI();
+            inputEl.placeholder = 'Введите код';
+            inputEl.inputMode = 'numeric';
+            inputEl.classList.remove('text-mode');
+            clearBtn.classList.remove('visible');
+            clearResults();
+            closeSuggestions();
+            return;
+        }
+        if (val === '') { 
+            clearBtn.classList.remove('visible');
+            clearResults(); 
+            closeSuggestions(); 
+            return; 
+        }
+        clearBtn.classList.add('visible');
+        if (val.length >= 1) showSuggestions(val);
+        if (currentMode === 'code') {
+            if (/^\d+$/.test(val) && val.length >= 1) performSearch();
+        } else {
+            if (/[а-яёa-z]/i.test(val) && val.length >= 2) performSearch();
+        }
+    });
+    
+    inputEl.addEventListener('blur', () => { setTimeout(closeSuggestions, 200); });
+    clearBtn.addEventListener('click', () => { 
+        inputEl.value = ''; 
+        clearBtn.classList.remove('visible');
+        clearResults(); 
+        closeSuggestions();
+        inputEl.focus();
+        toggleVoiceButton(true);
+    });
+
+    // ===== ТЕМЫ =====
+    const themes = ['dark', 'light', 'auto'];
+    const themeIcons = { dark: '🌙', light: '☀️', auto: '🌓' };
+    function applyTheme(theme) {
+        document.body.classList.remove('dark', 'light');
+        if (theme === 'light') document.body.classList.add('light');
+        else if (theme === 'dark') document.body.classList.add('dark');
+        else {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.body.classList.add(prefersDark ? 'dark' : 'light');
+        }
+        localStorage.setItem('appTheme', theme);
+        themeBtn.innerHTML = themeIcons[theme];
+        currentTheme = theme;
+    }
+    const savedTheme = localStorage.getItem('appTheme') || 'dark';
+    applyTheme(savedTheme);
+    themeBtn.addEventListener('click', () => {
+        let current = localStorage.getItem('appTheme') || 'dark';
+        let next = themes[(themes.indexOf(current) + 1) % 3];
+        applyTheme(next);
+    });
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (localStorage.getItem('appTheme') === 'auto') applyTheme('auto');
+    });
+    
+    loadData();
+</script>
+</body>
+</html>
