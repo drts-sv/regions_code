@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+
+# Build outputs
+dist/
+build/
+*.apk
+*.aab
+
+# Local configuration
+local.properties
+
+# Node (если будете использовать инструменты)
+node_modules/
+package-lock.json
