@@ -1,26 +1,52 @@
-# macOS
-.DS_Store
+```
+# Dependencies
+node_modules/
 
-# Windows
-Thumbs.db
+# Environment
+.env
+.env.local
+.env.*
 
-# IDE
+# Editors
 .vscode/
-.idea/
 
-# Temporary files
-*.tmp
-*.log
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py~
+*.pyc~
+*.pyo~
+*.pyd~
+*.py~
 
-# Build outputs
+# Build artifacts
 dist/
 build/
-*.apk
-*.aab
+*.egg-info/
 
-# Local configuration
-local.properties
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
 
-# Node (если будете использовать инструменты)
-node_modules/
-package-lock.json
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Testing
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+.env/
+```
