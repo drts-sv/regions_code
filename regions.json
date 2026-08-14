@@ -1,46 +1,1364 @@
-"43": ["Ленинградский военный округ (ЛенВО)", "ЛенВО"], 
-    "44": ["Западный военный округ", "ЗВО"], 
-    "45": ["Ведомства Военно-Морского флота (ВМФ)", "ВМФ РФ"], 
-    "50": ["Московский военный округ (МВО)", "МВО"], 
-    "51": ["Техника НЗ (длительного хранения) МВО", "МВО (резерв)"], 
-    "56": ["Космические войска РФ (ВКС)", "Космические войска"], 
-    "65": ["Приволжский военный округ (ПриВО)", "ПриВО"], 
-    "67": ["Воздушно-десантные войска (ВДВ)", "ВДВ"], 
-    "75": ["Спасательные воинские формирования гражданской обороны", "Спасательные формирования"], 
-    "76": ["Приволжско-Уральский военный округ (ПУрВО)", "ПУрВО"], 
-    "77": ["Автобазы Министерства обороны РФ и Генерального штаба", "Автобазы МО"], 
-    "81": ["Главное военно-строительное управление Министерства обороны РФ", "ГВСУ МО"], 
-    "82": ["Главное управление связи Министерства обороны РФ", "ГУС МО"], 
-    "83": ["Главное управление строительной промышленности Министерства обороны РФ", "ГУСП МО"], 
-    "84": ["Главное квартирно-эксплуатационное управление Министерства обороны РФ", "Главное КЭУ"], 
-    "87": ["Сибирский военный округ (СибВО)", "СибВО"], 
-    "88": ["Сибирский (Центральный) военный округ", "Центральный ВО"], 
-    "90": ["Черноморский флот", "Черноморский флот"], 
-    "91": ["Балтийский флот", "Балтийский флот"], 
-    "92": ["10-й Государственный испытательный полигон 'Сарышаган' / 201-я МСД", "Полигон Сарышаган / 201-я дивизия (Таджикистан)"], 
-    "93": ["Оперативная группа Российских войск в Приднестровье", "Приднестровье"], 
-    "94": ["Группа Российских войск в Закавказье", "Закавказье"], 
-    "97": ["Московский военный округ (МВО), в т. ч. Генеральный Штаб", "МВО / Генштаб"], 
-    "99": ["Военная автомобильная инспекция (ВАИ)", "Военная автоинспекция"] 
-  }, 
-  "planned": { 
-    "222": "Алтайский край", 
-    "278": "Санкт-Петербург", 
-    "330": "Астраханская область", 
-    "333": "Владимирская область", 
-    "444": "Костромская область", 
-    "497": "Москва", 
-    "616": "Республика Татарстан", 
-    "660": "Псковская область", 
-    "661": "Ростовская область", 
-    "663": "Самарская область", 
-    "664": "Саратовская область", 
-    "665": "Сахалинская область", 
-    "667": "Смоленская область", 
-    "668": "Тамбовская область", 
-    "669": "Тверская область", 
-    "878": "Санкт-Петербург", 
-    "995": "Чеченская Республика", 
-    "999": "Москва" 
-  } 
+{
+  "version": "4.0",
+  "updated": "2026-07-05",
+  "regionTypes": [
+    {"id": 1, "name": "республика"},
+    {"id": 2, "name": "край"},
+    {"id": 3, "name": "область"},
+    {"id": 4, "name": "город федерального значения"},
+    {"id": 5, "name": "автономная область"},
+    {"id": 6, "name": "автономный округ"},
+    {"id": 7, "name": "особая территория"}
+  ],
+  "regions": [
+    {
+      "id": 0,
+      "title": "Адыгея",
+      "typeId": 1,
+      "capital": "Майкоп",
+      "phones": "8772",
+      "codes": [
+        {"code": 1, "status": "active"},
+        {"code": 101, "status": "active"}
+      ],
+      "okato": "79",
+      "code_iso_31662": "RU-AD",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 1,
+      "title": "Башкортостан",
+      "typeId": 1,
+      "capital": "Уфа",
+      "phones": "347",
+      "codes": [
+        {"code": 2, "status": "active"},
+        {"code": 102, "status": "active"},
+        {"code": 702, "status": "active"}
+      ],
+      "okato": "80",
+      "code_iso_31662": "RU-BA",
+      "utc_offset": "+05:00"
+    },
+    {
+      "id": 2,
+      "title": "Бурятия",
+      "typeId": 1,
+      "capital": "Улан-Удэ",
+      "phones": "3012",
+      "codes": [
+        {"code": 3, "status": "active"},
+        {"code": 103, "status": "active"}
+      ],
+      "okato": "81",
+      "code_iso_31662": "RU-BU",
+      "utc_offset": "+07:00"
+    },
+    {
+      "id": 3,
+      "title": "Алтай",
+      "typeId": 1,
+      "capital": "Горно-Алтайск",
+      "phones": "38822",
+      "codes": [
+        {"code": 4, "status": "active"},
+        {"code": 104, "status": "active"}
+      ],
+      "okato": "84",
+      "code_iso_31662": "RU-AL",
+      "utc_offset": "+07:00"
+    },
+    {
+      "id": 4,
+      "title": "Дагестан",
+      "typeId": 1,
+      "capital": "Махачкала",
+      "phones": "8722",
+      "codes": [
+        {"code": 5, "status": "active"},
+        {"code": 105, "status": "active"}
+      ],
+      "okato": "82",
+      "code_iso_31662": "RU-DA",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 5,
+      "title": "Ингушетия",
+      "typeId": 1,
+      "capital": "Магас",
+      "phones": "8734",
+      "codes": [
+        {"code": 6, "status": "active"},
+        {"code": 106, "status": "active"}
+      ],
+      "okato": "26",
+      "code_iso_31662": "RU-IN",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 6,
+      "title": "Кабардино-Балкария",
+      "typeId": 1,
+      "capital": "Нальчик",
+      "phones": "8662",
+      "codes": [
+        {"code": 7, "status": "active"},
+        {"code": 107, "status": "active"}
+      ],
+      "okato": "83",
+      "code_iso_31662": "RU-KB",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 7,
+      "title": "Калмыкия",
+      "typeId": 1,
+      "capital": "Элиста",
+      "phones": "84722",
+      "codes": [
+        {"code": 8, "status": "active"},
+        {"code": 108, "status": "active"}
+      ],
+      "okato": "85",
+      "code_iso_31662": "RU-KL",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 8,
+      "title": "Карачаево-Черкесия",
+      "typeId": 1,
+      "capital": "Черкесск",
+      "phones": "8782",
+      "codes": [
+        {"code": 9, "status": "active"},
+        {"code": 109, "status": "active"}
+      ],
+      "okato": "91",
+      "code_iso_31662": "RU-KC",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 9,
+      "title": "Карелия",
+      "typeId": 1,
+      "capital": "Петрозаводск",
+      "phones": "8142",
+      "codes": [
+        {"code": 10, "status": "active"},
+        {"code": 110, "status": "active"}
+      ],
+      "okato": "86",
+      "code_iso_31662": "RU-KR",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 10,
+      "title": "Коми",
+      "typeId": 1,
+      "capital": "Сыктывкар",
+      "phones": "8212",
+      "codes": [
+        {"code": 11, "status": "active"},
+        {"code": 111, "status": "active"}
+      ],
+      "okato": "87",
+      "code_iso_31662": "RU-KO",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 11,
+      "title": "Марий Эл",
+      "typeId": 1,
+      "capital": "Йошкар-Ола",
+      "phones": "8362",
+      "codes": [
+        {"code": 12, "status": "active"},
+        {"code": 112, "status": "active"}
+      ],
+      "okato": "88",
+      "code_iso_31662": "RU-ME",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 12,
+      "title": "Мордовия",
+      "typeId": 1,
+      "capital": "Саранск",
+      "phones": "8342",
+      "codes": [
+        {"code": 13, "status": "active"},
+        {"code": 113, "status": "active"}
+      ],
+      "okato": "89",
+      "code_iso_31662": "RU-MO",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 13,
+      "title": "Саха (Якутия)",
+      "typeId": 1,
+      "capital": "Якутск",
+      "phones": "4112",
+      "codes": [
+        {"code": 14, "status": "active"},
+        {"code": 114, "status": "active"}
+      ],
+      "okato": "98",
+      "code_iso_31662": "RU-SA",
+      "utc_offset": "+09:00"
+    },
+    {
+      "id": 14,
+      "title": "Северная Осетия — Алания",
+      "typeId": 1,
+      "capital": "Владикавказ",
+      "phones": "8672",
+      "codes": [
+        {"code": 15, "status": "active"},
+        {"code": 115, "status": "active"}
+      ],
+      "okato": "90",
+      "code_iso_31662": "RU-SE",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 15,
+      "title": "Татарстан",
+      "typeId": 1,
+      "capital": "Казань",
+      "phones": "843",
+      "codes": [
+        {"code": 16, "status": "active"},
+        {"code": 116, "status": "active"},
+        {"code": 716, "status": "active"}
+      ],
+      "okato": "92",
+      "code_iso_31662": "RU-TA",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 16,
+      "title": "Тыва",
+      "typeId": 1,
+      "capital": "Кызыл",
+      "phones": "39422",
+      "codes": [
+        {"code": 17, "status": "active"},
+        {"code": 117, "status": "active"}
+      ],
+      "okato": "93",
+      "code_iso_31662": "RU-TY",
+      "utc_offset": "+07:00"
+    },
+    {
+      "id": 17,
+      "title": "Удмуртия",
+      "typeId": 1,
+      "capital": "Ижевск",
+      "phones": "3412",
+      "codes": [
+        {"code": 18, "status": "active"},
+        {"code": 118, "status": "active"}
+      ],
+      "okato": "94",
+      "code_iso_31662": "RU-UD",
+      "utc_offset": "+04:00"
+    },
+    {
+      "id": 18,
+      "title": "Хакасия",
+      "typeId": 1,
+      "capital": "Абакан",
+      "phones": "3902",
+      "codes": [
+        {"code": 19, "status": "active"},
+        {"code": 119, "status": "active"}
+      ],
+      "okato": "95",
+      "code_iso_31662": "RU-KK",
+      "utc_offset": "+07:00"
+    },
+    {
+      "id": 19,
+      "title": "Чечня",
+      "typeId": 1,
+      "capital": "Грозный",
+      "phones": "8712",
+      "codes": [
+        {"code": 20, "status": "active"},
+        {"code": 95, "status": "active"},
+        {"code": 195, "status": "active"}
+      ],
+      "okato": "96",
+      "code_iso_31662": "RU-CE",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 20,
+      "title": "Чувашия",
+      "typeId": 1,
+      "capital": "Чебоксары",
+      "phones": "8352",
+      "codes": [
+        {"code": 21, "status": "active"},
+        {"code": 121, "status": "active"}
+      ],
+      "okato": "97",
+      "code_iso_31662": "RU-CU",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 21,
+      "title": "Алтайский",
+      "typeId": 2,
+      "capital": "Барнаул",
+      "phones": "3852",
+      "codes": [
+        {"code": 22, "status": "active"},
+        {"code": 122, "status": "active"}
+      ],
+      "okato": "01",
+      "code_iso_31662": "RU-ALT",
+      "utc_offset": "+07:00"
+    },
+    {
+      "id": 22,
+      "title": "Краснодарский",
+      "typeId": 2,
+      "capital": "Краснодар",
+      "phones": "861",
+      "codes": [
+        {"code": 23, "status": "active"},
+        {"code": 93, "status": "active"},
+        {"code": 123, "status": "active"},
+        {"code": 193, "status": "active"},
+        {"code": 323, "status": "active"}
+      ],
+      "okato": "03",
+      "code_iso_31662": "RU-KDA",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 23,
+      "title": "Красноярский",
+      "typeId": 2,
+      "capital": "Красноярск",
+      "phones": "391",
+      "codes": [
+        {"code": 24, "status": "active"},
+        {"code": 84, "status": "active"},
+        {"code": 88, "status": "active"},
+        {"code": 124, "status": "active"}
+      ],
+      "okato": "04",
+      "code_iso_31662": "RU-KYA",
+      "utc_offset": "+07:00"
+    },
+    {
+      "id": 24,
+      "title": "Приморский",
+      "typeId": 2,
+      "capital": "Владивосток",
+      "phones": "423",
+      "codes": [
+        {"code": 25, "status": "active"},
+        {"code": 125, "status": "active"},
+        {"code": 725, "status": "active"}
+      ],
+      "okato": "05",
+      "code_iso_31662": "RU-PRI",
+      "utc_offset": "+10:00"
+    },
+    {
+      "id": 25,
+      "title": "Ставропольский",
+      "typeId": 2,
+      "capital": "Ставрополь",
+      "phones": "8652",
+      "codes": [
+        {"code": 26, "status": "active"},
+        {"code": 126, "status": "active"}
+      ],
+      "okato": "07",
+      "code_iso_31662": "RU-STA",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 26,
+      "title": "Хабаровский",
+      "typeId": 2,
+      "capital": "Хабаровск",
+      "phones": "4212",
+      "codes": [
+        {"code": 27, "status": "active"},
+        {"code": 127, "status": "active"}
+      ],
+      "okato": "08",
+      "code_iso_31662": "RU-KHA",
+      "utc_offset": "+10:00"
+    },
+    {
+      "id": 27,
+      "title": "Камчатский",
+      "typeId": 2,
+      "capital": "Петропавловск-Камчатский",
+      "phones": "4152",
+      "codes": [
+        {"code": 41, "status": "active"},
+        {"code": 141, "status": "active"}
+      ],
+      "okato": "30",
+      "code_iso_31662": "RU-KAM",
+      "utc_offset": "+12:00"
+    },
+    {
+      "id": 28,
+      "title": "Пермский",
+      "typeId": 2,
+      "capital": "Пермь",
+      "phones": "342",
+      "codes": [
+        {"code": 59, "status": "active"},
+        {"code": 81, "status": "active"},
+        {"code": 159, "status": "active"}
+      ],
+      "okato": "57",
+      "code_iso_31662": "RU-PER",
+      "utc_offset": "+05:00"
+    },
+    {
+      "id": 29,
+      "title": "Забайкальский",
+      "typeId": 2,
+      "capital": "Чита",
+      "phones": "3022",
+      "codes": [
+        {"code": 75, "status": "active"},
+        {"code": 175, "status": "active"}
+      ],
+      "okato": "76",
+      "code_iso_31662": "RU-ZAB",
+      "utc_offset": "+09:00"
+    },
+    {
+      "id": 30,
+      "title": "Амурская",
+      "typeId": 3,
+      "capital": "Благовещенск",
+      "phones": "4162",
+      "codes": [
+        {"code": 28, "status": "active"},
+        {"code": 128, "status": "active"}
+      ],
+      "okato": "10",
+      "code_iso_31662": "RU-AMU",
+      "utc_offset": "+09:00"
+    },
+    {
+      "id": 31,
+      "title": "Архангельская",
+      "typeId": 3,
+      "capital": "Архангельск",
+      "phones": "8182",
+      "codes": [
+        {"code": 29, "status": "active"},
+        {"code": 129, "status": "active"}
+      ],
+      "okato": "11",
+      "code_iso_31662": "RU-ARK",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 32,
+      "title": "Астраханская",
+      "typeId": 3,
+      "capital": "Астрахань",
+      "phones": "8512",
+      "codes": [
+        {"code": 30, "status": "active"},
+        {"code": 130, "status": "active"}
+      ],
+      "okato": "12",
+      "code_iso_31662": "RU-AST",
+      "utc_offset": "+04:00"
+    },
+    {
+      "id": 33,
+      "title": "Белгородская",
+      "typeId": 3,
+      "capital": "Белгород",
+      "phones": "4722",
+      "codes": [
+        {"code": 31, "status": "active"},
+        {"code": 131, "status": "active"}
+      ],
+      "okato": "14",
+      "code_iso_31662": "RU-BEL",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 34,
+      "title": "Брянская",
+      "typeId": 3,
+      "capital": "Брянск",
+      "phones": "4832",
+      "codes": [
+        {"code": 32, "status": "active"},
+        {"code": 132, "status": "active"}
+      ],
+      "okato": "15",
+      "code_iso_31662": "RU-BRY",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 35,
+      "title": "Владимирская",
+      "typeId": 3,
+      "capital": "Владимир",
+      "phones": "4922",
+      "codes": [
+        {"code": 33, "status": "active"},
+        {"code": 133, "status": "active"}
+      ],
+      "okato": "17",
+      "code_iso_31662": "RU-VLA",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 36,
+      "title": "Волгоградская",
+      "typeId": 3,
+      "capital": "Волгоград",
+      "phones": "8442",
+      "codes": [
+        {"code": 34, "status": "active"},
+        {"code": 134, "status": "active"}
+      ],
+      "okato": "18",
+      "code_iso_31662": "RU-VGG",
+      "utc_offset": "+04:00"
+    },
+    {
+      "id": 37,
+      "title": "Вологодская",
+      "typeId": 3,
+      "capital": "Вологда",
+      "phones": "8172",
+      "codes": [
+        {"code": 35, "status": "active"},
+        {"code": 135, "status": "active"}
+      ],
+      "okato": "19",
+      "code_iso_31662": "RU-VLG",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 38,
+      "title": "Воронежская",
+      "typeId": 3,
+      "capital": "Воронеж",
+      "phones": "473",
+      "codes": [
+        {"code": 36, "status": "active"},
+        {"code": 136, "status": "active"}
+      ],
+      "okato": "20",
+      "code_iso_31662": "RU-VOR",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 39,
+      "title": "Ивановская",
+      "typeId": 3,
+      "capital": "Иваново",
+      "phones": "4932",
+      "codes": [
+        {"code": 37, "status": "active"},
+        {"code": 137, "status": "active"}
+      ],
+      "okato": "24",
+      "code_iso_31662": "RU-IVA",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 40,
+      "title": "Иркутская",
+      "typeId": 3,
+      "capital": "Иркутск",
+      "phones": "3952",
+      "codes": [
+        {"code": 38, "status": "active"},
+        {"code": 85, "status": "active"},
+        {"code": 138, "status": "active"}
+      ],
+      "okato": "25",
+      "code_iso_31662": "RU-IRK",
+      "utc_offset": "+08:00"
+    },
+    {
+      "id": 41,
+      "title": "Калининградская",
+      "typeId": 3,
+      "capital": "Калининград",
+      "phones": "4012",
+      "codes": [
+        {"code": 39, "status": "active"},
+        {"code": 91, "status": "active"},
+        {"code": 139, "status": "active"}
+      ],
+      "okato": "27",
+      "code_iso_31662": "RU-KGD",
+      "utc_offset": "+02:00"
+    },
+    {
+      "id": 42,
+      "title": "Калужская",
+      "typeId": 3,
+      "capital": "Калуга",
+      "phones": "4842",
+      "codes": [
+        {"code": 40, "status": "active"},
+        {"code": 140, "status": "active"}
+      ],
+      "okato": "29",
+      "code_iso_31662": "RU-KLU",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 43,
+      "title": "Кемеровская",
+      "typeId": 3,
+      "capital": "Кемерово",
+      "phones": "3842",
+      "codes": [
+        {"code": 42, "status": "active"},
+        {"code": 142, "status": "active"}
+      ],
+      "okato": "32",
+      "code_iso_31662": "RU-KEM",
+      "utc_offset": "+07:00"
+    },
+    {
+      "id": 44,
+      "title": "Кировская",
+      "typeId": 3,
+      "capital": "Киров",
+      "phones": "8332",
+      "codes": [
+        {"code": 43, "status": "active"},
+        {"code": 143, "status": "active"}
+      ],
+      "okato": "33",
+      "code_iso_31662": "RU-KIR",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 45,
+      "title": "Костромская",
+      "typeId": 3,
+      "capital": "Кострома",
+      "phones": "4942",
+      "codes": [
+        {"code": 44, "status": "active"},
+        {"code": 144, "status": "active"}
+      ],
+      "okato": "34",
+      "code_iso_31662": "RU-KOS",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 46,
+      "title": "Курганская",
+      "typeId": 3,
+      "capital": "Курган",
+      "phones": "3522",
+      "codes": [
+        {"code": 45, "status": "active"},
+        {"code": 145, "status": "active"}
+      ],
+      "okato": "37",
+      "code_iso_31662": "RU-KGN",
+      "utc_offset": "+05:00"
+    },
+    {
+      "id": 47,
+      "title": "Курская",
+      "typeId": 3,
+      "capital": "Курск",
+      "phones": "4712",
+      "codes": [
+        {"code": 46, "status": "active"},
+        {"code": 146, "status": "active"}
+      ],
+      "okato": "38",
+      "code_iso_31662": "RU-KRS",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 48,
+      "title": "Ленинградская",
+      "typeId": 3,
+      "capital": "Гатчина",
+      "phones": "813",
+      "codes": [
+        {"code": 47, "status": "active"},
+        {"code": 147, "status": "active"}
+      ],
+      "okato": "41",
+      "code_iso_31662": "RU-LEN",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 49,
+      "title": "Липецкая",
+      "typeId": 3,
+      "capital": "Липецк",
+      "phones": "4742",
+      "codes": [
+        {"code": 48, "status": "active"},
+        {"code": 148, "status": "active"}
+      ],
+      "okato": "42",
+      "code_iso_31662": "RU-LIP",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 50,
+      "title": "Магаданская",
+      "typeId": 3,
+      "capital": "Магадан",
+      "phones": "4132",
+      "codes": [
+        {"code": 49, "status": "active"},
+        {"code": 149, "status": "active"}
+      ],
+      "okato": "44",
+      "code_iso_31662": "RU-MAG",
+      "utc_offset": "+11:00"
+    },
+    {
+      "id": 51,
+      "title": "Московская",
+      "typeId": 3,
+      "capital": "Красногорск",
+      "phones": "496,498",
+      "codes": [
+        {"code": 50, "status": "active"},
+        {"code": 90, "status": "active"},
+        {"code": 150, "status": "active"},
+        {"code": 190, "status": "active"},
+        {"code": 250, "status": "active"},
+        {"code": 550, "status": "active"},
+        {"code": 750, "status": "active"},
+        {"code": 790, "status": "active"}
+      ],
+      "okato": "46",
+      "code_iso_31662": "RU-MOS",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 52,
+      "title": "Мурманская",
+      "typeId": 3,
+      "capital": "Мурманск",
+      "phones": "8152",
+      "codes": [
+        {"code": 51, "status": "active"},
+        {"code": 151, "status": "active"}
+      ],
+      "okato": "47",
+      "code_iso_31662": "RU-MUR",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 53,
+      "title": "Нижегородская",
+      "typeId": 3,
+      "capital": "Нижний Новгород",
+      "phones": "831",
+      "codes": [
+        {"code": 52, "status": "active"},
+        {"code": 152, "status": "active"},
+        {"code": 252, "status": "active"}
+      ],
+      "okato": "22",
+      "code_iso_31662": "RU-NIZ",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 54,
+      "title": "Новгородская",
+      "typeId": 3,
+      "capital": "Великий Новгород",
+      "phones": "8162",
+      "codes": [
+        {"code": 53, "status": "active"},
+        {"code": 153, "status": "active"}
+      ],
+      "okato": "49",
+      "code_iso_31662": "RU-NGR",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 55,
+      "title": "Новосибирская",
+      "typeId": 3,
+      "capital": "Новосибирск",
+      "phones": "383",
+      "codes": [
+        {"code": 54, "status": "active"},
+        {"code": 154, "status": "active"},
+        {"code": 754, "status": "active"}
+      ],
+      "okato": "50",
+      "code_iso_31662": "RU-NVS",
+      "utc_offset": "+07:00"
+    },
+    {
+      "id": 56,
+      "title": "Омская",
+      "typeId": 3,
+      "capital": "Омск",
+      "phones": "3812",
+      "codes": [
+        {"code": 55, "status": "active"},
+        {"code": 155, "status": "active"}
+      ],
+      "okato": "52",
+      "code_iso_31662": "RU-OMS",
+      "utc_offset": "+06:00"
+    },
+    {
+      "id": 57,
+      "title": "Оренбургская",
+      "typeId": 3,
+      "capital": "Оренбург",
+      "phones": "3532",
+      "codes": [
+        {"code": 56, "status": "active"},
+        {"code": 156, "status": "active"}
+      ],
+      "okato": "53",
+      "code_iso_31662": "RU-ORE",
+      "utc_offset": "+05:00"
+    },
+    {
+      "id": 58,
+      "title": "Орловская",
+      "typeId": 3,
+      "capital": "Орёл",
+      "phones": "4862",
+      "codes": [
+        {"code": 57, "status": "active"},
+        {"code": 157, "status": "active"}
+      ],
+      "okato": "54",
+      "code_iso_31662": "RU-ORL",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 59,
+      "title": "Пензенская",
+      "typeId": 3,
+      "capital": "Пенза",
+      "phones": "8412",
+      "codes": [
+        {"code": 58, "status": "active"},
+        {"code": 158, "status": "active"}
+      ],
+      "okato": "56",
+      "code_iso_31662": "RU-PNZ",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 60,
+      "title": "Псковская",
+      "typeId": 3,
+      "capital": "Псков",
+      "phones": "8112",
+      "codes": [
+        {"code": 60, "status": "active"}
+      ],
+      "okato": "58",
+      "code_iso_31662": "RU-PSK",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 61,
+      "title": "Ростовская",
+      "typeId": 3,
+      "capital": "Ростов-на-Дону",
+      "phones": "863",
+      "codes": [
+        {"code": 61, "status": "active"},
+        {"code": 161, "status": "active"},
+        {"code": 761, "status": "active"}
+      ],
+      "okato": "60",
+      "code_iso_31662": "RU-ROS",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 62,
+      "title": "Рязанская",
+      "typeId": 3,
+      "capital": "Рязань",
+      "phones": "4912",
+      "codes": [
+        {"code": 62, "status": "active"},
+        {"code": 162, "status": "active"}
+      ],
+      "okato": "61",
+      "code_iso_31662": "RU-RYA",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 63,
+      "title": "Самарская",
+      "typeId": 3,
+      "capital": "Самара",
+      "phones": "846",
+      "codes": [
+        {"code": 63, "status": "active"},
+        {"code": 163, "status": "active"},
+        {"code": 763, "status": "active"}
+      ],
+      "okato": "36",
+      "code_iso_31662": "RU-SAM",
+      "utc_offset": "+04:00"
+    },
+    {
+      "id": 64,
+      "title": "Саратовская",
+      "typeId": 3,
+      "capital": "Саратов",
+      "phones": "8452",
+      "codes": [
+        {"code": 64, "status": "active"},
+        {"code": 164, "status": "active"}
+      ],
+      "okato": "63",
+      "code_iso_31662": "RU-SAR",
+      "utc_offset": "+04:00"
+    },
+    {
+      "id": 65,
+      "title": "Сахалинская",
+      "typeId": 3,
+      "capital": "Южно-Сахалинск",
+      "phones": "4242",
+      "codes": [
+        {"code": 65, "status": "active"},
+        {"code": 165, "status": "active"}
+      ],
+      "okato": "64",
+      "code_iso_31662": "RU-SAK",
+      "utc_offset": "+11:00"
+    },
+    {
+      "id": 66,
+      "title": "Свердловская",
+      "typeId": 3,
+      "capital": "Екатеринбург",
+      "phones": "343",
+      "codes": [
+        {"code": 66, "status": "active"},
+        {"code": 96, "status": "active"},
+        {"code": 166, "status": "active"},
+        {"code": 196, "status": "active"}
+      ],
+      "okato": "65",
+      "code_iso_31662": "RU-SVE",
+      "utc_offset": "+05:00"
+    },
+    {
+      "id": 67,
+      "title": "Смоленская",
+      "typeId": 3,
+      "capital": "Смоленск",
+      "phones": "4812",
+      "codes": [
+        {"code": 67, "status": "active"},
+        {"code": 167, "status": "active"}
+      ],
+      "okato": "66",
+      "code_iso_31662": "RU-SMO",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 68,
+      "title": "Тамбовская",
+      "typeId": 3,
+      "capital": "Тамбов",
+      "phones": "4752",
+      "codes": [
+        {"code": 68, "status": "active"},
+        {"code": 168, "status": "active"}
+      ],
+      "okato": "68",
+      "code_iso_31662": "RU-TAM",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 69,
+      "title": "Тверская",
+      "typeId": 3,
+      "capital": "Тверь",
+      "phones": "4822",
+      "codes": [
+        {"code": 69, "status": "active"},
+        {"code": 169, "status": "active"}
+      ],
+      "okato": "28",
+      "code_iso_31662": "RU-TVE",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 70,
+      "title": "Томская",
+      "typeId": 3,
+      "capital": "Томск",
+      "phones": "3822",
+      "codes": [
+        {"code": 70, "status": "active"},
+        {"code": 170, "status": "active"}
+      ],
+      "okato": "69",
+      "code_iso_31662": "RU-TOM",
+      "utc_offset": "+07:00"
+    },
+    {
+      "id": 71,
+      "title": "Тульская",
+      "typeId": 3,
+      "capital": "Тула",
+      "phones": "4872",
+      "codes": [
+        {"code": 71, "status": "active"},
+        {"code": 171, "status": "active"}
+      ],
+      "okato": "70",
+      "code_iso_31662": "RU-TUL",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 72,
+      "title": "Тюменская",
+      "typeId": 3,
+      "capital": "Тюмень",
+      "phones": "3452",
+      "codes": [
+        {"code": 72, "status": "active"},
+        {"code": 172, "status": "active"}
+      ],
+      "okato": "71",
+      "code_iso_31662": "RU-TYU",
+      "utc_offset": "+05:00"
+    },
+    {
+      "id": 73,
+      "title": "Ульяновская",
+      "typeId": 3,
+      "capital": "Ульяновск",
+      "phones": "8422",
+      "codes": [
+        {"code": 73, "status": "active"},
+        {"code": 173, "status": "active"}
+      ],
+      "okato": "73",
+      "code_iso_31662": "RU-ULY",
+      "utc_offset": "+04:00"
+    },
+    {
+      "id": 74,
+      "title": "Челябинская",
+      "typeId": 3,
+      "capital": "Челябинск",
+      "phones": "351",
+      "codes": [
+        {"code": 74, "status": "active"},
+        {"code": 174, "status": "active"},
+        {"code": 774, "status": "active"}
+      ],
+      "okato": "75",
+      "code_iso_31662": "RU-CHE",
+      "utc_offset": "+05:00"
+    },
+    {
+      "id": 75,
+      "title": "Ярославская",
+      "typeId": 3,
+      "capital": "Ярославль",
+      "phones": "4852",
+      "codes": [
+        {"code": 76, "status": "active"},
+        {"code": 176, "status": "active"}
+      ],
+      "okato": "78",
+      "code_iso_31662": "RU-YAR",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 76,
+      "title": "Москва",
+      "typeId": 4,
+      "capital": "Москва",
+      "phones": "495,499",
+      "codes": [
+        {"code": 77, "status": "active"},
+        {"code": 97, "status": "active"},
+        {"code": 99, "status": "active"},
+        {"code": 177, "status": "active"},
+        {"code": 197, "status": "active"},
+        {"code": 199, "status": "active"},
+        {"code": 277, "status": "active"},
+        {"code": 299, "status": "active"},
+        {"code": 777, "status": "active"},
+        {"code": 797, "status": "active"},
+        {"code": 799, "status": "active"},
+        {"code": 977, "status": "active"},
+        {"code": 222, "status": "planned"},
+        {"code": 497, "status": "planned"},
+        {"code": 999, "status": "planned"}
+      ],
+      "okato": "45",
+      "code_iso_31662": "RU-MOW",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 77,
+      "title": "Санкт-Петербург",
+      "typeId": 4,
+      "capital": "Санкт-Петербург",
+      "phones": "812",
+      "codes": [
+        {"code": 78, "status": "active"},
+        {"code": 98, "status": "active"},
+        {"code": 178, "status": "active"},
+        {"code": 198, "status": "active"},
+        {"code": 778, "status": "active"},
+        {"code": 278, "status": "planned"},
+        {"code": 878, "status": "planned"}
+      ],
+      "okato": "40",
+      "code_iso_31662": "RU-SPE",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 78,
+      "title": "Севастополь",
+      "typeId": 4,
+      "capital": "Севастополь",
+      "phones": "8692",
+      "codes": [
+        {"code": 92, "status": "active"},
+        {"code": 192, "status": "active"}
+      ],
+      "okato": "67",
+      "code_iso_31662": "RU-SEV",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 79,
+      "title": "Еврейская",
+      "typeId": 5,
+      "capital": "Биробиджан",
+      "phones": "42622",
+      "codes": [
+        {"code": 79, "status": "active"},
+        {"code": 179, "status": "active"}
+      ],
+      "okato": "99",
+      "code_iso_31662": "RU-YEV",
+      "utc_offset": "+10:00"
+    },
+    {
+      "id": 80,
+      "title": "Ненецкий",
+      "typeId": 6,
+      "capital": "Нарьян-Мар",
+      "phones": "81853",
+      "codes": [
+        {"code": 83, "status": "active"},
+        {"code": 183, "status": "active"}
+      ],
+      "okato": "11-8",
+      "code_iso_31662": "RU-NEN",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 81,
+      "title": "Ханты-Мансийский — Югра",
+      "typeId": 6,
+      "capital": "Ханты-Мансийск",
+      "phones": "3467",
+      "codes": [
+        {"code": 86, "status": "active"},
+        {"code": 186, "status": "active"}
+      ],
+      "okato": "71-8",
+      "code_iso_31662": "RU-KHM",
+      "utc_offset": "+05:00"
+    },
+    {
+      "id": 82,
+      "title": "Чукотский",
+      "typeId": 6,
+      "capital": "Анадырь",
+      "phones": "42722",
+      "codes": [
+        {"code": 87, "status": "active"},
+        {"code": 187, "status": "active"}
+      ],
+      "okato": "77",
+      "code_iso_31662": "RU-CHU",
+      "utc_offset": "+12:00"
+    },
+    {
+      "id": 83,
+      "title": "Ямало-Ненецкий",
+      "typeId": 6,
+      "capital": "Салехард",
+      "phones": "34922",
+      "codes": [
+        {"code": 89, "status": "active"},
+        {"code": 189, "status": "active"}
+      ],
+      "okato": "71-9",
+      "code_iso_31662": "RU-YAN",
+      "utc_offset": "+05:00"
+    },
+    {
+      "id": 84,
+      "title": "Донецкая Народная Республика",
+      "typeId": 1,
+      "capital": "Донецк",
+      "phones": "856",
+      "codes": [
+        {"code": 80, "status": "active"},
+        {"code": 180, "status": "active"}
+      ],
+      "okato": "35",
+      "code_iso_31662": null,
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 85,
+      "title": "Луганская Народная Республика",
+      "typeId": 1,
+      "capital": "Луганск",
+      "phones": "857",
+      "codes": [
+        {"code": 81, "status": "active"},
+        {"code": 181, "status": "active"}
+      ],
+      "okato": "36",
+      "code_iso_31662": null,
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 86,
+      "title": "Херсонская",
+      "typeId": 3,
+      "capital": "Геническ",
+      "phones": "855",
+      "codes": [
+        {"code": 84, "status": "active"},
+        {"code": 184, "status": "active"}
+      ],
+      "okato": "37",
+      "code_iso_31662": null,
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 87,
+      "title": "Запорожская",
+      "typeId": 3,
+      "capital": "Мелитополь",
+      "phones": "861",
+      "codes": [
+        {"code": 85, "status": "active"},
+        {"code": 185, "status": "active"}
+      ],
+      "okato": "38",
+      "code_iso_31662": null,
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 88,
+      "title": "Крым",
+      "typeId": 1,
+      "capital": "Симферополь",
+      "phones": "3652",
+      "codes": [
+        {"code": 82, "status": "active"},
+        {"code": 182, "status": "active"}
+      ],
+      "okato": "35",
+      "code_iso_31662": "RU-CR",
+      "utc_offset": "+03:00"
+    },
+    {
+      "id": 89,
+      "title": "Байконур",
+      "typeId": 7,
+      "capital": "Байконур",
+      "phones": "",
+      "codes": [
+        {"code": 94, "status": "active"},
+        {"code": 194, "status": "active"}
+      ],
+      "okato": null,
+      "code_iso_31662": null,
+      "utc_offset": "+05:00"
+    }
+  ],
+  "military": {
+    "9": ["СпецСтрой России", "Специальное строительство"],
+    "10": ["ФСБ РФ", "Федеральная служба безопасности"],
+    "11": ["Внутренние войска МВД РФ", "Внутренние войска"],
+    "12": ["Пограничные войска ФСБ РФ", "Пограничная служба"],
+    "14": ["Железнодорожные войска РФ", "Железнодорожные войска"],
+    "15": ["Внутренние войска МВД РФ", "Внутренние войска (доп)"],
+    "16": ["ФАПСИ", "Правительственная связь"],
+    "17": ["Оборонные организации РФ", "Оборонные организации"],
+    "18": ["МЧС РФ", "МЧС России"],
+    "19": ["Внутренние войска МВД РФ", "Внутренние войска"],
+    "20": ["ФДСУ", "Дорожное строительство"],
+    "21": ["СКВО", "Северо-Кавказский военный округ"],
+    "23": ["РВСН", "Ракетные войска стратегического назначения"],
+    "25": ["ДальВО", "Дальневосточный военный округ"],
+    "26": ["ДальВО (резерв)", "Техника НЗ Дальневосточного ВО"],
+    "27": ["Войска ПВО", "Войска противовоздушной обороны"],
+    "29": ["9-е ЦУ МО", "9-е Центральное управление МО РФ"],
+    "32": ["ЗабВО", "Забайкальский военный округ"],
+    "34": ["ВВС РФ", "Ведомства Военно-Воздушных сил"],
+    "35": ["Северный флот", "Северный флот"],
+    "39": ["12-е ГУ МО", "12-е Главное управление МО РФ"],
+    "43": ["ЛенВО", "Ленинградский военный округ"],
+    "44": ["ЗВО", "Западный военный округ"],
+    "45": ["ВМФ РФ", "Ведомства Военно-Морского флота"],
+    "50": ["МВО", "Московский военный округ"],
+    "51": ["МВО (резерв)", "Техника НЗ МВО"],
+    "56": ["Космические войска", "Космические войска РФ (ВКС)"],
+    "65": ["ПриВО", "Приволжский военный округ"],
+    "67": ["ВДВ", "Воздушно-десантные войска"],
+    "75": ["Спасательные формирования", "Спасательные воинские формирования ГО"],
+    "76": ["ПУрВО", "Приволжско-Уральский военный округ"],
+    "77": ["Автобазы МО", "Автобазы Министерства обороны РФ"],
+    "81": ["ГВСУ МО", "Главное военно-строительное управление МО РФ"],
+    "82": ["ГУС МО", "Главное управление связи МО РФ"],
+    "83": ["ГУСП МО", "Главное управление строительной промышленности МО РФ"],
+    "84": ["Главное КЭУ", "Главное квартирно-эксплуатационное управление МО РФ"],
+    "87": ["СибВО", "Сибирский военный округ"],
+    "88": ["Центральный ВО", "Сибирский (Центральный) военный округ"],
+    "90": ["Черноморский флот", "Черноморский флот"],
+    "91": ["Балтийский флот", "Балтийский флот"],
+    "92": ["Полигон Сарышаган / 201-я дивизия", "10-й ГИП 'Сарышаган' / 201-я МСД (Таджикистан)"],
+    "93": ["Приднестровье", "Оперативная группа Российских войск в Приднестровье"],
+    "94": ["Закавказье", "Группа Российских войск в Закавказье"],
+    "97": ["МВО / Генштаб", "Московский военный округ, в т. ч. Генеральный Штаб"],
+    "99": ["ВАИ", "Военная автомобильная инспекция"]
+  }
 }
