@@ -22,13 +22,13 @@ window.AppUI = {
         });
 
         if (firstRegionName && window.AppSpeech) {
-            setTimeout(() => window.AppSpeech.speak(firstRegionName), 300);
+            setTimeout(async () => { await window.AppSpeech.speak(firstRegionName); }, 300);
         }
 
         AppUI.updateControls(true);
     },
 
-    renderMilitary(name, desc) {
+    async renderMilitary(name, desc) {
         const container = document.getElementById('resultsContainer');
         if (!container) return;
         const card = document.createElement('div');
@@ -41,7 +41,7 @@ window.AppUI = {
         container.appendChild(card);
 
         if (window.AppSpeech) {
-            setTimeout(() => window.AppSpeech.speak(name), 300);
+            setTimeout(async () => { await window.AppSpeech.speak(name); }, 300);
         }
     },
 
