@@ -1233,7 +1233,7 @@ window.AppUI = {
         });
 
         if (firstRegionName && window.AppSpeech) {
-            setTimeout(() => window.AppSpeech.speak(firstRegionName), 300);
+            setTimeout(async () => { await window.AppSpeech.speak(firstRegionName); }, 300);
         }
 
         AppUI.updateControls(true);
@@ -1252,7 +1252,7 @@ window.AppUI = {
         container.appendChild(card);
 
         if (window.AppSpeech) {
-            setTimeout(() => window.AppSpeech.speak(name), 300);
+            setTimeout(async () => { await window.AppSpeech.speak(name); }, 300);
         }
     },
 
